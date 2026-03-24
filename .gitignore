@@ -9,6 +9,9 @@ Thumbs.db
 *.swo
 *~
 
+# OpenClaw local state
+.openclaw/
+
 # Dependencies
 node_modules/
 package-lock.json
