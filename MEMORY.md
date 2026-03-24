@@ -91,5 +91,7 @@
 | 2026-03-23 | feat(framework): 完善OpenClaw自动记忆框架，新增Git式更新流程和多项目支持 | OpenClaw |
 | 2026-03-23 | feat(auto-memory): 配置每日自动记忆汇总cron任务，每日22:00自动提炼当日对话归档，增量更新到长期记忆仓库 | OpenClaw |
 | 2026-03-23 | sync(pc_xiaohongzhujiao_plus): 同步项目进展，教师端班级管理功能开发完成，所有接口测试通过 | OpenClaw |
+| 2026-03-23 | feat(auto-memory): 确定自动化记忆提炼机制：每日归档 → 自动提炼 → 增量更新长期记忆 | OpenClaw |
+| 2026-03-23 | feat(workflow): 确定自动提炼工作流：本地提炼 → 邮件汇总 → 用户确认 → 推送GitHub | OpenClaw |
 | 2026-03-24 | feat(repo): 完成仓库全量中文化，确定仓库语言规范：首选中文，英文附翻译 | OpenClaw |
 | 2026-03-24 | refactor(repo): 彻底清理git历史，只保留记忆相关文件，移除所有无关依赖和脚本 | OpenClaw |
