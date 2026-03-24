@@ -27,7 +27,6 @@
 - 用户每天需要和多个大模型对话，希望建立自动记忆提炼机制：**每日对话归档 → 自动汇总提炼 → 存入长期记忆仓库**
 - 交流偏好：轻松随意，像朋友一样聊天
 - **归档原则**：必须保存完整原始对话才能保证档案可追溯，不丢失有价值信息
-- **独立判断原则**：AI需要独立判断用户说法是否正确合理，如果不对或不合理，需要勇敢说不，反驳并给出理由
 
 ---
 
@@ -46,7 +45,7 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，已有开发内容 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过 |
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
@@ -87,3 +86,5 @@
 |------|---------|--------|
 | 2026-03-23 | 初始整理分类结构，重构MEMORY.md，按分类归档 | OpenClaw |
 | 2026-03-23 | feat(framework): 完善OpenClaw自动记忆框架，新增Git式更新流程和多项目支持 | OpenClaw |
+| 2026-03-23 | feat(auto-memory): 配置每日自动记忆汇总cron任务，每日22:00自动提炼当日对话归档，增量更新到长期记忆仓库 | OpenClaw |
+| 2026-03-23 | sync(pc_xiaohongzhujiao_plus): 同步项目进展，教师端班级管理功能开发完成，所有接口测试通过 | OpenClaw |
