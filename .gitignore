@@ -8,3 +8,40 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Scripts and executables
+*.pyc
+__pycache__/
+
+# Non-memory files (keep repo pure - only keep organized memory files)
+*.py
+*.js
+*.html
+news/
+auto_chat_bot.py
+crawl_weixin.js
+debug_*.py
+debug_output.html
+fetch-*.js
+fetch_*.py
+final_email.html
+generate_news.py
+list_folders.py
+news-collector.sh
+news_*.py
+optimize_prompt*.py
+openclaw.json
+send-*.js
+send_*.py
+test_*.py
+test_email.html
+verify_news.py
+weixin_article.html
+20260309_important_news.md
+"智能作文批改系统*.md
+"智能作文批改系统*.html
+高中议论文范文.md
