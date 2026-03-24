@@ -76,7 +76,7 @@
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
-| solo | `/Users/matianjun/solo/` | ✅ 已接入，已有OpenClaw配置调试经验 |
+| solo | `/Users/matianjun/solo/` | ✅ 已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
 
 ### 统一记忆结构（所有项目共用）
 
@@ -125,3 +125,4 @@
 | 2026-03-24 | feat(calendar): 更新为国务院官方2026年法定节假日准确安排，包括调休补班信息 | OpenClaw |
 | 2026-03-24 | feat(rule): 新增联网查询原则，低频查询需求直接让用户百度获取，不强求配置API | OpenClaw |
 | 2026-03-24 | sync(pc_xiaohongzhujiao_plus): 同步今日项目进展，完成类型变更、重名检查优化、关联关系修复 | OpenClaw |
+| 2026-03-24 | sync(solo): 同步OpenClaw配置问答进展，新增多个常见问题解答 | OpenClaw |
