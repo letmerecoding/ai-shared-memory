@@ -22,6 +22,7 @@ __pycache__/
 *.js
 *.html
 news/
+BOOTSTRAP.md
 auto_chat_bot.py
 crawl_weixin.js
 debug_*.py
@@ -33,6 +34,7 @@ generate_news.py
 list_folders.py
 news-collector.sh
 news_*.py
+news_*.txt
 optimize_prompt*.py
 openclaw.json
 send-*.js
