@@ -1,40 +1,42 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - 本地工具配置笔记
 
-Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
+技能定义了工具**如何工作**。这个文件用来存放**你的特定配置**——那些只属于你个人环境的信息。
 
-## What Goes Here
+## 这里放什么
 
-Things like:
+这类信息：
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+- 摄像头名称和位置
+- SSH 主机和别名
+- TTS（文字转语音）偏好的音色
+- 音箱/房间名称
+- 设备昵称
+- 任何环境特定的配置
 
-## Examples
+## 示例
 
 ```markdown
-### Cameras
+### 摄像头
 
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
+- 客厅 → 主区域，180° 广角
+- 前门 → 入口，触发式移动侦测
 
 ### SSH
 
-- home-server → 192.168.1.100, user: admin
+- 家庭服务器 → 192.168.1.100，用户名：admin
 
-### TTS
+### TTS（文字转语音）
 
-- Preferred voice: "Nova" (warm, slightly British)
-- Default speaker: Kitchen HomePod
+- 偏好音色："Nova"（温暖，略带英式口音）
+- 默认播放音箱：厨房 HomePod
 ```
 
-## Why Separate?
+## 为什么分开存放？
 
-Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
+技能是共享的。你的配置是你的。分开存放意味着：
+- 更新技能时不会丢失你的笔记
+- 分享技能时不会泄露你的基础设施信息
 
 ---
 
-Add whatever helps you do your job. This is your cheat sheet.
+添加任何能帮你更好工作的内容。这是你的速查表。
