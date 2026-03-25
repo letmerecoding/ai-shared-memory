@@ -71,6 +71,7 @@
  - 实现按学段返回对应年级列表功能（小学、初中、高中）
  - 优化班级分页查询增加教师权限验证
 </pre>**书写要点**：<br>- 标题：直接说明核心改动 `type(scope): 添加xx功能并优化xx`<br>- 条目：每个改动一条，每条只讲一件事<br>- 用词：用专业术语描述逻辑改进，不说具体实现细节<br>- 完整性：涵盖所有层级修改<br>- 顺序：按代码层级从小到大排列 |
+| 6 | **远程操作安全规则**：<br>对于公司项目远程仓库，**没有用户明确指令绝不推送**，只更新本地记忆文件。"同步到各个项目"指更新各个项目本地记忆文件，不是推送到项目远程仓库 |
 
 ---
 
@@ -78,7 +79,7 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则 |
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
@@ -105,6 +106,7 @@
 | 分类 | 文件 | 说明 |
 |------|------|------|
 | 编码规范 | [categories/coding.md](categories/coding.md) | Java & Spring 开发规范、自检清单、接口测试要点 |
+| 故障排查 | [categories/openclaw-faq.md](categories/openclaw-faq.md) | OpenClaw 常见问题解答和故障排查指南 |
 
 ### 项目级AI协作
 - 项目内 `.trae/` 目录存放记忆，长期规范 + 双层按日归档，多个AI共同维护
@@ -133,3 +135,7 @@
 | 2026-03-24 | sync(pc_xiaohongzhujiao_plus): 同步今日项目进展，完成类型变更、重名检查优化、关联关系修复 | OpenClaw |
 | 2026-03-24 | sync(solo): 同步OpenClaw配置问答进展，新增多个常见问题解答 | OpenClaw |
 | 2026-03-24 | feat(规范): 提炼Git提交信息写法规范到全局长期记忆，全项目统一使用该规范 | OpenClaw |
+| 2026-03-24 | feat(security): 新增公司项目远程操作安全规则：无明确指令不推送，只更新本地记忆 | OpenClaw |
+| 2026-03-25 | feat(faq): 新增 OpenClaw 常见问题分类，整理7条常见问题和解决方案到 `categories/openclaw-faq.md` | OpenClaw |
+| 2026-03-25 | sync(pc_xiaohongzhujiao_plus): 完成 `xiaoHongDev` 项目初始化，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范（包含Git提交规范、远程安全规则） | OpenClaw |
+| 2026-03-25 | sync(all-projects): 给所有已接入项目同步新增远程操作安全规则，确保所有项目规范一致最新 | OpenClaw |
