@@ -150,3 +150,5 @@
 | 2026-03-25 | feat(faq): 新增 OpenClaw 常见问题分类，整理7条常见问题和解决方案到 `categories/openclaw-faq.md` | OpenClaw |
 | 2026-03-25 | sync(pc_xiaohongzhujiao_plus): 完成 `xiaoHongDev` 项目初始化，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范（包含Git提交规范、远程安全规则） | OpenClaw |
 | 2026-03-25 | sync(all-projects): 给所有已接入项目同步新增远程操作安全规则，确保所有项目规范一致最新 | OpenClaw |
+| 2026-03-25 | feat(rule): 新增铁律要求：每次开工先读规范再做事，做完自查，漏一步就是错 | OpenClaw |
+| 2026-03-25 | feat(coding): 提炼通用开发规范到全局 `categories/coding.md`：新增接口测试完整标准流程 + 多分支同步差异对比流程 | OpenClaw |
