@@ -74,6 +74,11 @@
 - **各工作区记忆**：仅保存当前代理/部门特有规则和流程
 - **双向同步**：通用性规范从全局同步到各工作区，各工作区提炼的通用规则同步回全局
 
+### 太子工作区位置
+
+- **工作区路径**：`/Users/matianjun/.openclaw/workspace-taizi/`
+- **独立Git仓库**：已初始化独立仓库，遵循只维护 `main` 分支规范
+
 ### 每日记忆提炼流程（已验证完整可用）
 
 1. **每日归档**：各项目和全局都按日归档对话，格式为 `memory/YYYY-MM-DD.md`
@@ -158,7 +163,7 @@
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
 | solo | `/Users/matianjun/solo/` | ✅ 已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
-| 太子工作区 | `/Users/matianjun/.openclaw/workspace-taizi/` | ✅ 已初始化，负责飞书消息分拣和每日记忆提炼<br>2026-03-26 更新：✅ 完成身份配置，接手每日定时提炼任务，全流程测试验证通过 |
+| 太子工作区 | `/Users/matianjun/.openclaw/workspace-taizi/` | ✅ 已初始化，负责飞书消息分拣和每日记忆提炼<br>2026-03-26 更新：✅ 完成身份配置，接手每日定时提炼任务，全流程测试验证通过<br>2026-03-26 更新：✅ 修复定时任务 `Channel is required` 报错，添加飞书渠道配置，任务可正常执行 |
 
 ### 统一记忆结构（所有项目共用）
 
@@ -225,3 +230,4 @@
 | 2026-03-26 | feat(architecture): 新增三省六部制多代理架构说明，明确太子角色定位和记忆同步规则 | 太子 |
 | 2026-03-26 | feat(process): 补充每日记忆提炼完整流程，验证全流程可用 | 太子 |
 | 2026-03-26 | practice(git): pc_xiaohongzhujiao_plus 项目实践验证了Git提交信息写法规范，确认格式正确可行 | 太子 |
+| 2026-03-26 | chore(cron): 修复每日定时任务 Channel 配置问题，验证提炼流程完整可用 | 太子 |
