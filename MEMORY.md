@@ -158,7 +158,7 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，Spring Boot Java 后端纯教师端项目<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回<br>2026-03-26 更新：✅ 完成从学校管理员端分支同步完整教师管理功能，实现"学校/教师二选一"权限控制逻辑，所有接口测试通过 |
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
@@ -231,3 +231,4 @@
 | 2026-03-26 | feat(process): 补充每日记忆提炼完整流程，验证全流程可用 | 太子 |
 | 2026-03-26 | practice(git): pc_xiaohongzhujiao_plus 项目实践验证了Git提交信息写法规范，确认格式正确可行 | 太子 |
 | 2026-03-26 | chore(cron): 修复每日定时任务 Channel 配置问题，验证提炼流程完整可用 | 太子 |
+| 2026-03-26 | sync(pc_xiaohongzhujiao_plus): 同步项目最新进展，完成教师管理功能同步，实现"学校/教师二选一"权限控制，所有接口测试通过 | OpenClaw |
