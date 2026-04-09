@@ -341,3 +341,4 @@
 | 2026-04-02 | fix(format): 修正铁律第10条诚实回答表格格式，对齐markdown表格 | 太子 |
 | 2026-04-08 | sync(pc_xiaohongzhujiao_plus): 同步项目最新进展，完成OSS预览图永久化改造 | OpenClaw |
 | 2026-04-08 | feat(oss): 提炼OSS预览图永久化改造方案，包含缓存设计和批量清洗优化经验 | OpenClaw |
+| 2026-04-09 | feat(batch): 将批量数据处理优化实践提炼到全局编码规范 categories/coding.md，所有Java项目可通用 | 太子 |
