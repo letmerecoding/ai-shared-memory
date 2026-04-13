@@ -47,3 +47,5 @@ weixin_article.html
 "智能作文批改系统*.md
 "智能作文批改系统*.html
 高中议论文范文.md
+# Daily archive files - keep local only, don't push to remote
+memory/
