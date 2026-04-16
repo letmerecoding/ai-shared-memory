@@ -73,6 +73,10 @@
 - **联网查询需求处理原则**：
   - 如果需求需要联网查询数据，且**不需要频繁查询** → 直接让用户去百度搜索获取信息，不需要强求配置 API key
   - 只有需要频繁自动查询的场景，才需要配置 API 或其他联网能力
+- **全局记忆远程仓库**：
+  - 本地路径：`/Users/matianjun/ai-shared-memory/`
+  - 远程地址：`https://github.com/letmerecoding/ai-shared-memory.git`
+  - 推送规则：全局记忆框架更新完成后，默认推送到这个仓库
 
 ---
 
@@ -98,7 +102,7 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回<br>2026-04-14 更新：✅ 完成PPT重新生成功能架构重构，确定并行生成图片方案，提取独立方法 `regenerateSinglePage`，为整个PPT重新生成打好地基 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回 |
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
@@ -167,4 +171,4 @@
 | 2026-04-13 | feat(security): 新增安全操作铁律：网络数据变更操作（上传/下载/git等）需要用户二次确认，只有read操作可以不确认 | OpenClaw |
 | 2026-04-13 | feat(process): 新增先理解后执行核查机制：阅读框架/接任务后必须回答5个预设问题确认理解，确认无误再执行 | OpenClaw |
 | 2026-04-13 | feat(context): 新增上下文找回机制：维护 `CURRENT_DISCUSSION.md` 记录当前讨论进度，新建/重启会话快速找回上下文 | OpenClaw |
-| 2026-04-14 | sync(pc_xiaohongzhujiao_plus): 同步PPT重新生成功能最新进展：完成架构重构，确定并行生成图片方案，提取独立方法为整个PPT重新生成打好地基 | OpenClaw |
+| 2026-04-16 | sync(pc_xiaohongzhujiao_plus): 同步提炼大模型输出JSON解析容错方案，总结实践经验；完成整个PPT重新生成功能开发 | OpenClaw |
