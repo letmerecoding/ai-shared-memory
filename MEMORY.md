@@ -102,7 +102,7 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回<br>2026-04-20 更新：✅ 完成PPT重新生成功能全流程开发（含代码重构、JSON嵌套兼容、历史会话存储、异步任务轮询架构改造） |
 | pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
 | sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
 | thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
@@ -129,6 +129,7 @@
 | 分类 | 文件 | 说明 |
 |------|------|------|
 | 编码规范 | [categories/coding.md](categories/coding.md) | Java & Spring 开发规范、自检清单、接口测试要点 |
+| 架构设计 | [categories/architecture.md](categories/architecture.md) | 通用架构设计模式、编码规范、最佳实践（含异步任务、版本控制、大模型交互等） |
 | 故障排查 | [categories/openclaw-faq.md](categories/openclaw-faq.md) | OpenClaw 常见问题解答和故障排查指南 |
 
 ### 项目级AI协作
@@ -172,3 +173,5 @@
 | 2026-04-13 | feat(process): 新增先理解后执行核查机制：阅读框架/接任务后必须回答5个预设问题确认理解，确认无误再执行 | OpenClaw |
 | 2026-04-13 | feat(context): 新增上下文找回机制：维护 `CURRENT_DISCUSSION.md` 记录当前讨论进度，新建/重启会话快速找回上下文 | OpenClaw |
 | 2026-04-16 | sync(pc_xiaohongzhujiao_plus): 同步提炼大模型输出JSON解析容错方案，总结实践经验；完成整个PPT重新生成功能开发 | OpenClaw |
+| 2026-04-21 | feat(architecture): 新增 `categories/architecture.md` 架构设计规范文件，提炼8条通用开发模式：异步任务轮询架构、API防越权、版本控制策略、大模型JSON容错、代码重构实践、SSE返回值变更模式、项目命名规范、常见问题速查 | OpenClaw |
+| 2026-04-21 | sync(pc_xiaohongzhujiao_plus): 同步项目最新进展，PPT重新生成功能全流程开发完成（代码重构+异步任务+前端轮询） | OpenClaw |
