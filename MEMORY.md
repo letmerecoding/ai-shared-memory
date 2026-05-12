@@ -36,7 +36,7 @@
 
 ## 👤 用户信息
 
-- **称呼**：大哥
+- **称呼**：用户
 - **时区**：Asia/Shanghai
 
 ---
@@ -74,7 +74,7 @@
   - 如果需求需要联网查询数据，且**不需要频繁查询** → 直接让用户去百度搜索获取信息，不需要强求配置 API key
   - 只有需要频繁自动查询的场景，才需要配置 API 或其他联网能力
 - **全局记忆远程仓库**：
-  - 本地路径：`/Users/matianjun/ai-shared-memory/`
+  - 本地路径：`{工作目录}/ai-shared-memory/`
   - 远程地址：`https://github.com/letmerecoding/ai-shared-memory.git`
   - 推送规则：全局记忆框架更新完成后，默认推送到这个仓库
 
@@ -100,13 +100,13 @@
 
 ## 📁 已接入项目
 
-| 项目名称 | 项目地址 | 状态 |
+| 项目代号 | 路径说明 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回<br>2026-04-20 更新：✅ 完成PPT重新生成功能全流程开发（含代码重构、JSON嵌套兼容、历史会话存储、异步任务轮询架构改造）<br>2026-05-12 更新：✅ 新增无意义输入场景感知质检机制、大模型提示词优化教训总结、提交信息写法补充细则 |
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
-| sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
-| thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
-| solo | `/Users/matianjun/solo/` | ✅ 已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
+| 项目A | `{工作目录}/项目A/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回<br>2026-04-20 更新：✅ 完成PPT重新生成功能全流程开发（含代码重构、JSON嵌套兼容、历史会话存储、异步任务轮询架构改造）<br>2026-05-12 更新：✅ 新增无意义输入场景感知质检机制、大模型提示词优化教训总结、提交信息写法补充细则 |
+| 项目A（分支2） | `{工作目录}/项目A/` | ✅ 已初始化规范 |
+| 项目B | `{工作目录}/项目B/` | ✅ 已初始化规范 |
+| 项目C | `{工作目录}/项目C/` | ✅ 已初始化规范 |
+| 项目D | `{工作目录}/项目D/` | ✅ 已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
 
 ### 统一记忆结构（所有项目共用）
 
@@ -232,7 +232,7 @@
 | 2026-03-23 | 初始整理分类结构，重构MEMORY.md，按分类归档 | OpenClaw |
 | 2026-03-23 | feat(framework): 完善OpenClaw自动记忆框架，新增Git式更新流程和多项目支持 | OpenClaw |
 | 2026-03-23 | feat(auto-memory): 配置每日自动记忆汇总cron任务，每日22:00自动提炼当日对话归档，增量更新到长期记忆仓库 | OpenClaw |
-| 2026-03-23 | sync(pc_xiaohongzhujiao_plus): 同步项目进展，教师端班级管理功能开发完成，所有接口测试通过 | OpenClaw |
+| 2026-03-23 | sync(项目A): 同步项目进展，教师端班级管理功能开发完成，所有接口测试通过 | OpenClaw |
 | 2026-03-23 | feat(auto-memory): 确定自动化记忆提炼机制：每日归档 → 自动提炼 → 增量更新长期记忆 | OpenClaw |
 | 2026-03-23 | feat(workflow): 确定自动提炼工作流：本地提炼 → 邮件汇总 → 用户确认 → 推送GitHub | OpenClaw |
 | 2026-03-24 | feat(repo): 完成仓库全量中文化，确定仓库语言规范：首选中文，英文附翻译 | OpenClaw |
@@ -242,27 +242,27 @@
 | 2026-03-24 | feat(workflow): 更新自动提炼邮件发送规则，发件前判断次日是否休息日，休息日延后到工作日发送 | OpenClaw |
 | 2026-03-24 | feat(calendar): 更新为国务院官方2026年法定节假日准确安排，包括调休补班信息 | OpenClaw |
 | 2026-03-24 | feat(rule): 新增联网查询原则，低频查询需求直接让用户百度获取，不强求配置API | OpenClaw |
-| 2026-03-24 | sync(pc_xiaohongzhujiao_plus): 同步今日项目进展，完成类型变更、重名检查优化、关联关系修复 | OpenClaw |
-| 2026-03-24 | sync(solo): 同步OpenClaw配置问答进展，新增多个常见问题解答 | OpenClaw |
+| 2026-03-24 | sync(项目A): 同步今日项目进展，完成类型变更、重名检查优化、关联关系修复 | OpenClaw |
+| 2026-03-24 | sync(项目D): 同步OpenClaw配置问答进展，新增多个常见问题解答 | OpenClaw |
 | 2026-03-24 | feat(规范): 提炼Git提交信息写法规范到全局长期记忆，全项目统一使用该规范 | OpenClaw |
 | 2026-03-24 | feat(security): 新增公司项目远程操作安全规则：无明确指令不推送，只更新本地记忆 | OpenClaw |
 | 2026-03-25 | feat(faq): 新增 OpenClaw 常见问题分类，整理7条常见问题和解决方案到 `categories/openclaw-faq.md` | OpenClaw |
-| 2026-03-25 | sync(pc_xiaohongzhujiao_plus): 完成 `xiaoHongDev` 项目初始化，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范（包含Git提交规范、远程安全规则） | OpenClaw |
+| 2026-03-25 | sync(项目A): 完成项目初始化，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范（包含Git提交规范、远程安全规则） | OpenClaw |
 | 2026-03-25 | sync(all-projects): 给所有已接入项目同步新增远程操作安全规则，确保所有项目规范一致最新 | OpenClaw |
 | 2026-03-25 | feat(rule): 新增铁律要求：每次开工先读规范再做事，做完自查，漏一步就是错 | OpenClaw |
 | 2026-03-25 | feat(coding): 提炼通用开发规范到全局 `categories/coding.md`：新增接口测试完整标准流程 + 多分支同步差异对比流程 | OpenClaw |
 | 2026-03-25 | feat(铁律): 新增4条实践总结铁律，补充Git操作、同步规范、场景区分规则 | OpenClaw |
 | 2026-03-25 | feat(review): 建立每日复盘机制，每天下班前复盘当天错误和改进措施 | OpenClaw |
 | 2026-03-25 | feat(mechanism): 建立惩罚和激励机制，督促严格遵守规则 | OpenClaw |
-| 2026-03-25 | sync(pc_xiaohongzhujiao_plus): 完成 `getClassName` 接口从通州分支同步到教师端分支，适配纯教师端特性：返回类型按年级分组，添加当前教师关联班级权限过滤 | OpenClaw |
+| 2026-03-25 | sync(项目A): 完成 `getClassName` 接口从通州分支同步到教师端分支，适配纯教师端特性：返回类型按年级分组，添加当前教师关联班级权限过滤 | OpenClaw |
 | 2026-04-13 | feat(security): 新增安全操作铁律：网络数据变更操作（上传/下载/git等）需要用户二次确认，只有read操作可以不确认 | OpenClaw |
 | 2026-04-13 | feat(process): 新增先理解后执行核查机制：阅读框架/接任务后必须回答5个预设问题确认理解，确认无误再执行 | OpenClaw |
 | 2026-04-13 | feat(context): 新增上下文找回机制：维护 `CURRENT_DISCUSSION.md` 记录当前讨论进度，新建/重启会话快速找回上下文 | OpenClaw |
-| 2026-04-16 | sync(pc_xiaohongzhujiao_plus): 同步提炼大模型输出JSON解析容错方案，总结实践经验；完成整个PPT重新生成功能开发 | OpenClaw |
+| 2026-04-16 | sync(项目A): 同步提炼大模型输出JSON解析容错方案，总结实践经验；完成整个PPT重新生成功能开发 | OpenClaw |
 | 2026-04-21 | feat(architecture): 新增 `categories/architecture.md` 架构设计规范文件，提炼8条通用开发模式：异步任务轮询架构、API防越权、版本控制策略、大模型JSON容错、代码重构实践、SSE返回值变更模式、项目命名规范、常见问题速查 | OpenClaw |
-| 2026-04-21 | sync(pc_xiaohongzhujiao_plus): 同步项目最新进展，PPT重新生成功能全流程开发完成（代码重构+异步任务+前端轮询） | OpenClaw |
+| 2026-04-21 | sync(项目A): 同步项目最新进展，PPT重新生成功能全流程开发完成（代码重构+异步任务+前端轮询） | OpenClaw |
 | 2026-05-06 | feat(prompts): 建立全局提示词文件目录 `prompts/`，将"渐进式代码开发工作流"拆分为6个独立提示词文件，采用"全局维护标准版本 + 项目按需同步"混合方案 | OpenClaw |
 | 2026-05-12 | feat(prompt): 新增大模型提示词优化教训——过度约束适得其反，"照抄原结构"策略优于教模型重新构造 | OpenClaw |
 | 2026-05-12 | feat(qa): 新增无意义输入场景感知质检机制——三级场景匹配，否定判断要精确区分"有效无关"和"完全乱码" | OpenClaw |
 | 2026-05-12 | refine(git): 补充Git提交信息写法细则——scope选模块名、条目只写功能改动、不遗漏日志清理/注释修复等小改动 | OpenClaw |
-| 2026-05-12 | sync(pc_xiaohongzhujiao_plus): 同步项目最新进展，完成场景感知质检重构和提示词迭代优化 | OpenClaw |
+| 2026-05-12 | sync(项目A): 同步项目最新进展，完成场景感知质检重构和提示词迭代优化 | OpenClaw |
