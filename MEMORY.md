@@ -1,4 +1,8 @@
-# MEMORY.md - 全局长期记忆仓库
+# MEMORY.md - 全局长期记忆仓库（全量备份）
+
+> **定位说明（2026-06-03 更新）**：本文件现在作为全量备份文件 / 历史兼容文件保留。
+> 新记忆框架入口以 `MEMORY_INDEX.md` 为准；新增或更新记忆时，优先写入对应拆分文件（`rules.md`、`profile.md`、`workflow.md`、`project_registry.md`、`categories/`、`prompts/` 等）。
+
 
 这是OpenClaw的全局长期记忆仓库，存放从每日对话和各项目归档中提炼出来的、有长期保留价值的信息。
 
