@@ -49,3 +49,14 @@ weixin_article.html
 高中议论文范文.md
 # Daily archive files - keep local only, don't push to remote
 memory/
+
+# OpenClaw local workspace/config files - not part of shared memory repository
+.openclaw/
+AGENTS.md
+SOUL.md
+SYSTEM.md
+TOOLS.md
+USER.md
+IDENTITY.md
+HEARTBEAT.md
+CURRENT_DISCUSSION.md
