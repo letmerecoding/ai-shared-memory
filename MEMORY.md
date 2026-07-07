@@ -270,3 +270,4 @@
 | 2026-05-12 | feat(qa): 新增无意义输入场景感知质检机制——三级场景匹配，否定判断要精确区分"有效无关"和"完全乱码" | OpenClaw |
 | 2026-05-12 | refine(git): 补充Git提交信息写法细则——scope选模块名、条目只写功能改动、不遗漏日志清理/注释修复等小改动 | OpenClaw |
 | 2026-05-12 | sync(项目A): 同步项目最新进展，完成场景感知质检重构和提示词迭代优化 | OpenClaw |
+| 2026-07-07 | sync(all-projects): 同步xiaohongDev最新记忆框架到所有项目（xiaoHongMaster、sjth-cloud、thProjects、solo），新增通用规范：每日复盘机制、解决问题方法论、设计模式、JSON解析容错、AI避坑指南、冷热数据分离、求是思想方法论、渐进式开发工作流、提示词优化教训、场景感知质检；同步qiushi-skill到所有项目 | OpenClaw |
