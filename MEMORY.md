@@ -22,6 +22,12 @@
 | 12 | **上下文找回机制**：维护 `CURRENT_DISCUSSION.md` 记录当前讨论进度和共识，新建/重启会话时先读此文件，快速找回上下文 |
 | 13 | **诚实回答**：如果忘记规范了、找不到文件了、不确定怎么做，**必须立刻说出来**，严禁假装自己会了然后继续做错；让读文件必须真读，读完再说内容，严禁不读就假装读了、更严禁编造虚假的文件内容；不懂就问，错了就改，不隐瞒不伪装 |
 | 14 | **语义确认优先**：用户说出一句话后，不要立刻执行操作，先确认语义理解正确，得到用户确认后再执行操作。大模型有"先做事后理解"的特性，容易理解错就直接做了，必须先确认语义 |
+| 15 | **同文件编辑串行**：同一文件的多处编辑操作禁止并行调用（会互相覆盖丢失代码）；同文件编辑必须串行执行且每处核对 diff，不同文件才可并行 |
+| 16 | **暂存区对齐验证**：commit 前必须执行 `git diff --stat`（暂存区 vs 工作区）确认输出为空——AM/M 状态文件的暂存区可能停留在更早 `git add` 时点的内容，与铁律 6 的 `git status` 检查配合执行 |
+| 17 | **跨库复制检查**：跨项目/跨模块复制方法时，必须逐段检查调用上下文差异（批量源 vs 单目标、有无关联表、根语义等），照搬整段但不适配的死代码必须删除 |
+| 18 | **已定义概念主动回查**：涉及层级口径、深度定义等已归档概念时，必须先读原始归档文件确认定义，不凭会话压缩后的模糊记忆作答——压缩会丢失精确表述；认错后必须回头核对归档原文断根 |
+| 19 | **提示词/配置 SQL 执行验证**：给出提示词 UPDATE/INSERT SQL 后必须跟踪执行情况，执行后 SELECT 验证真实入库，防留底文件与 DB 版本漂移；提示词变更 SQL 优先全量回写式（幂等、不依赖 DB 现状），不用追加式 CONCAT |
+| 20 | **记忆更新日期追踪**：每次更新记忆文件时，必须在项目状态文件的"最近一次记忆更新"区域记录日期和更新内容，方便追溯上次更新时间 |
 
 ---
 
@@ -120,12 +126,14 @@
 
 | 项目名称 | 项目地址 | 状态 |
 |---------|---------|------|
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ 已接入，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回 |
-| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ 已初始化规范 |
-| ms-courseware-service-hub | `/Users/matianjun/xiaoHongDev/ms-courseware-service-hub/` | ✅ 新项目初始化完成，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范 |
-| sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ 已初始化规范 |
-| thProjects | `/Users/matianjun/thProjects/` | ✅ 已初始化规范 |
-| solo | `/Users/matianjun/solo/` | ✅ 已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongDev/pc_xiaohongzhujiao_plus/` | ✅ **活跃**，教师端班级管理功能开发完成，所有接口测试通过<br>2026-03-24 更新：完成类型变更、重名检查优化、关联关系修复<br>2026-03-25 更新：✅ 已初始化完整规范，创建 `.trae/collaboration-memory.md`，同步全局所有最新规则<br>2026-03-25 更新：✅ 完成 `getClassName` 接口同步，适配纯教师端权限过滤，只返回当前教师关联班级，按年级分组返回 |
+| pc_xiaohongzhujiao_plus | `/Users/matianjun/xiaoHongMaster/pc_xiaohongzhujiao_plus/` | ✅ **活跃**，已初始化规范 |
+| ms-courseware-service-hub | `/Users/matianjun/xiaoHongDev/ms-courseware-service-hub/` | ⛔ **已停用**（2026-10-20 确认）<br>原状态：新项目初始化完成，创建 `.trae/collaboration-memory.md`，同步全局所有最新规范 |
+| sjth-cloud | `/Users/matianjun/sjth-cloud/` | ✅ **活跃**，已初始化规范 |
+| thProjects | `/Users/matianjun/thProjects/` | ✅ **活跃**，已初始化规范 |
+| solo | `/Users/matianjun/solo/` | ⛔ **已停用**（2026-10-20 确认）<br>原状态：已接入，OpenClaw + 火山方舟 Coding Plan 配置指南和常见问题整理<br>2026-03-24 更新：新增多个常见问题解答，包括权限错误、启动命令、配置向导网络错误、答非所问解决、新建会话方法、API配置说明、卸载教程 |
+
+> **当前活跃开发库：4 个**（两个 pc_xiaohongzhujiao_plus、sjth-cloud、thProjects），"总-分-总"汇总下发循环仅针对活跃项目。
 
 ### 统一记忆结构（所有项目共用）
 
@@ -138,7 +146,8 @@
   - 按时间顺序逐轮记录，一轮都不能少
   - 完整保留每轮原话，格式清晰区分用户和AI
   - 存档后必须自查轮次，确保完整
-- **自动汇总**：OpenClaw 每日 22:00 自动读取各项目当日归档，提炼更新长期记忆，去重合并不新增重复内容
+- **记忆自维护**：当日归档完成后（或用户指示"更新记忆"时），从归档中提炼信息更新对应记忆文件，并在项目状态文件记录更新日期（铁律 20）
+- **总-分-总循环**：用户指令驱动（现行机制，替代早期 OpenClaw 每日 22:00 定时任务）——读取各活跃项目记忆框架 → 汇总提取共性 → 更新总纲并推送远程 → 下发最新框架回各项目
 - **协作规范**：多个AI共同维护，随项目走，新窗口自动加载
 
 ---
@@ -147,13 +156,15 @@
 
 | 分类 | 文件 | 说明 |
 |------|------|------|
-| 编码规范 | [categories/coding.md](categories/coding.md) | Java & Spring 开发规范、自检清单、接口测试要点 |
+| 编码规范 | [categories/coding.md](categories/coding.md) | Java & Spring 规范、自检清单、接口测试、MyBatis/SQL 优化、前端 Vue3/TS 规范、类形态设计三问 |
+| 架构设计 | [categories/architecture.md](categories/architecture.md) | 通用架构模式（异步任务、冷热分离、防越权、JSON 容错、权限双层可见性、SQL 幂等追加、服务权责分明等）|
 | 故障排查 | [categories/openclaw-faq.md](categories/openclaw-faq.md) | OpenClaw 常见问题解答和故障排查指南 |
 
 ### 项目级AI协作
 - 项目内 `.trae/` 目录存放记忆，长期规范 + 双层按日归档，多个AI共同维护
 - **完整归档要求**：必须保存完整原始对话，才能保证档案可追溯，不丢失有价值信息
-- **自动汇总机制**：OpenClaw 每日自动从各项目归档提炼，更新长期记忆，双向同步去重
+- **总-分-总汇总循环**：用户隔一段时间发出指令，AI 读取各活跃项目记忆框架 → 汇总提取共性 → 更新总纲并推送远程 → 下发最新框架回各项目
+- 项目侧记忆框架标准结构与全局同步锚点机制详见 [project_registry.md](project_registry.md)
 
 ---
 
@@ -193,3 +204,5 @@
 | 2026-04-16 | sync(pc_xiaohongzhujiao_plus): 同步提炼大模型输出JSON解析容错方案，总结实践经验；完成整个PPT重新生成功能开发 | OpenClaw |
 | 2026-07-01 | sync(iron-rules): 从项目同步新增2条铁律：诚实回答（#13）、语义确认优先（#14）；新增惩罚与激励机制 | OpenClaw |
 | 2026-07-28 | sync(ms-courseware-service-hub): 新项目初始化，在 `/Users/matianjun/xiaoHongDev/ms-courseware-service-hub/` 创建完整规范，同步全局所有最新规则 | OpenClaw |
+| 2026-10-20 | sync(registry): 确认四个活跃开发库（两个 pc_xiaohongzhujiao_plus、sjth-cloud、thProjects），标记 ms-courseware-service-hub、solo 为已停用，总-分-总循环仅针对活跃项目 | Trae |
+| 2026-10-20 | 总-分-总回流执行：rules.md 新增铁律#15~#20；architecture.md 新增 #10~#12 + JSON容错扩充 + 速查表3条；coding.md 新增九/十/十一章（SQL优化、Vue3规范、类形态三问）；workflow.md 新增通用协作方法论7条 + 大模型交互经验3条 + 总-分-总机制更新；project_registry.md 新增全局同步锚点机制与各项目结构状态。来源：项目A（rules 17~22、identity_and_workflow、experience）、项目A分支2（architecture 本地增量）、项目B（Vue3规范） | Trae |

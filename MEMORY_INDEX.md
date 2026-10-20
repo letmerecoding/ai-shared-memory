@@ -7,21 +7,21 @@
 
 ## 🚨 启动必读（每次会话必须加载）
 
-- **`rules.md`**：全局铁律、安全规则、Git 规则、OpenClaw 操作规范。所有操作前必读。
+- **`rules.md`**：全局铁律（20 条）、安全规则、Git 规则、OpenClaw 操作规范。所有操作前必读。
 - **`profile.md`**：用户信息、交流偏好、重要长期偏好、全局仓库信息。
-- **`workflow.md`**：记忆维护流程、先理解后执行机制、归档机制、渐进式开发工作流。
+- **`workflow.md`**：记忆维护流程、总-分-总汇总循环、通用协作方法论、归档机制、渐进式开发工作流、大模型交互经验。
 - **`CURRENT_DISCUSSION.md`**：当前讨论进度；若存在且非空，启动时读取以恢复上下文。
 
 ## 📁 项目与状态
 
-- **`project_registry.md`**：已接入项目清单、路径说明、项目级记忆结构、同步规则。
+- **`project_registry.md`**：已接入项目清单、路径说明、项目级记忆结构、全局同步锚点机制、同步规则。
 
 ## 📚 领域规范（按需加载）
 
 | 触发关键词 / 场景 | 对应文件 |
 | --- | --- |
-| Java、Spring、接口测试、分支同步、查询优化、批量处理 | `categories/coding.md` |
-| 架构设计、异步任务、轮询、冷热分离、版本控制、防越权、大模型 JSON 容错 | `categories/architecture.md` |
+| Java、Spring、接口测试、分支同步、查询优化、批量处理、MyBatis/SQL 优化、雪花算法、Vue3、前端、类形态设计 | `categories/coding.md` |
+| 架构设计、异步任务、轮询、冷热分离、版本控制、防越权、大模型 JSON 容错、权限双层可见性、SQL 幂等追加、服务权责、DTO 映射 | `categories/architecture.md` |
 | OpenClaw、网关、配置、权限、卸载、使用问题 | `categories/openclaw-faq.md` |
 
 ## 📄 提示词模板（执行对应任务时加载）
@@ -60,3 +60,4 @@
 | 日期 | 更新内容 | 更新人 |
 | --- | --- | --- |
 | 2026-06-03 | feat(framework): 新增索引驱动拆分入口，明确 `MEMORY.md` 为全量备份文件，入口以 `MEMORY_INDEX.md` 为准 | OpenClaw |
+| 2026-10-20 | 总-分-总回流后同步索引：铁律扩至 20 条、workflow 增通用协作方法论与总-分-总循环、registry 增全局同步锚点机制、领域规范触发关键词扩充（SQL 优化/Vue3/类形态/权限/幂等/DTO） | Trae |
